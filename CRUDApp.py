@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 
 db = SQLAlchemy(app)
+
 class Food(db.Model):
 	item = db.Column(db.String(80), unique=True, nullable=False, primary_key=True)
 	
