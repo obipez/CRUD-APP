@@ -12,13 +12,6 @@ class FoodItem(Base):
 
 	id = Column(Integer, primary_key = True)
 	name = Column(String(80), nullable = False)
-
-
-class FoodInfo(Base):
-	__tablename__ = 'nutritional_info'
-
-	name = Column(String(80), nullable = False)
-	id = Column(Integer, primary_key = True)
 	calories = Column(Integer)
 	fat_cals = Column(Integer)
 	total_fat = Column(Integer)
@@ -34,11 +27,8 @@ class FoodInfo(Base):
 	vitamin_c = Column(Integer)
 	calcium = Column(Integer)
 	iron = Column(Integer)
-	food_item_id = Column(Integer, ForeignKey('food_item.id'))
-	food_item = relationship(FoodItem)
-
 
 ########INSERT AT END OF FILE #############
 
-engine = create_engine('sqlite:///foodlist.db')
+engine = create_engine('sqlite:///foodlists.db')
 Base.metadata.create_all(engine)
