@@ -32,6 +32,26 @@ class webServerHandler(BaseHTTPRequestHandler):
                 self.wfile.write(output)
                 return
 
+            if self.path.endswith("/edit"):
+                foodIDPath = self.path.split("/")[2]
+                myFoodQuery = session.query(FoodItem).filter_by(
+                    id=foodIDPath).one()
+                if myFoodQuery:
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/html')
+                    self.end_headers()
+                    output = "<html><body>"
+                    output += "<h1>"
+                    output += myFoodQuery.name
+                    output += "</h1>"
+                    output += "<form method='POST' enctype='multipart/form-data' action = '/food_items/%s/edit' >" % foodIDPath
+                    output += "<input name = 'newFoodItem' type='text' placeholder = '%s' >" % myFoodQuery.name
+                    output += "<input type = 'submit' value = 'Rename'>"
+                    output += "</form>"
+                    output += "</body></html>"
+
+                    self.wfile.write(output)
+
             if self.path.endswith("/food_items"):
                 food_items = session.query(FoodItem).all()
                 output = ""
@@ -46,7 +66,7 @@ class webServerHandler(BaseHTTPRequestHandler):
                     output += food_item.name
                     output += "</br>"
                     #code to EDIT and DELETE links
-                    output += "<a href ='#' >Edit </a> "
+                    output += "<a href ='/food_items/%s/edit' >Edit </a> "
                     output += "</br>"
                     output += "<a href =' #'> Delete </a>"
                     output += "</br></br></br>"
