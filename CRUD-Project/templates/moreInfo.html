@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<head>Please enter custon data</head>
+<body>
+	<h1>{{item.name}}</h1>
+	<h3>{{item.calories}}</h3>
+	<h3>{{item.fat_cals}}</h3>
+	<h3>{{item.total_fat}}</h3>
+	<h3>{{item.saturated_fat}}</h3>
+	<h3>{{item.trans_fat}}</h3>
+	<h3>{{item.cholesterol}}</h3>
+	<h3>{{item.sodium}}</h3>
+	<h3>{{item.carbohydrates}}</h3>
+	<h3>{{item.dietary_fiber}}</h3>
+	<h3>{{item.sugars}}</h3>
+	<h3>{{item.protein}}</h3>
+	<h3>{{item.vitamin_a}}</h3>
+	<h3>{{item.vitamin_c}}</h3>
+	<h3>{{item.calcium}}</h3>
+	<h3>{{item.iron}}</h3>
+</body>
+	{% endfor %}
+{% endblock %}

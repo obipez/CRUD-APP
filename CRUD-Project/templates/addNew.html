@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<body>
+		<form method="POST" action="/add">
+			Title: <input type="text" name="title"><br>
+			Calories: <input type="text" name="calories"><br>
+			Calories from fat: <input type="text" name="fat_cals"><br>
+			Total Fat: <input type="text" name="total_fat"><br>
+			Saturated Fat: <input type="text" name="saturated_fat"><br>
+			Trans Fat: <input type="text" name="trans_fat"><br>
+			Cholesterol: <input type="text" name="cholesterol"><br>
+			Sodium: <input type="text" name="sodium"><br>
+			Carbohydrates: <input type="text" name="carbohydrates"><br>
+			Dietary Fiber: <input type="text" name="dietary_fiber"><br>
+			Sugars: <input type="text" name="sugars"><br>
+			Proteins: <input type="text" name="proteins"><br>
+			Vitamin A: <input type="text" name="vitamin_a"><br>
+			Vitamin C: <input type="text" name="vitamin_c"><br>
+			Calcium: <input type="text" name="calcium"><br>
+			Iron: <input type="text" name="iron"><br>
+			<input type="submit" value="Add">
+		</form>	
+	</body>
+	{% endfor %}
+{% endblock %}
