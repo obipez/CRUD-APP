@@ -1,24 +1,20 @@
 {% extends "main.html" %}
 {% block content %}
-{% include "header.html" %}
-<head>Please enter custon data</head>
-<body>
-	<h1>{{item.name}}</h1>
-	<h3>{{item.calories}}</h3>
-	<h3>{{item.fat_cals}}</h3>
-	<h3>{{item.total_fat}}</h3>
-	<h3>{{item.saturated_fat}}</h3>
-	<h3>{{item.trans_fat}}</h3>
-	<h3>{{item.cholesterol}}</h3>
-	<h3>{{item.sodium}}</h3>
-	<h3>{{item.carbohydrates}}</h3>
-	<h3>{{item.dietary_fiber}}</h3>
-	<h3>{{item.sugars}}</h3>
-	<h3>{{item.protein}}</h3>
-	<h3>{{item.vitamin_a}}</h3>
-	<h3>{{item.vitamin_c}}</h3>
-	<h3>{{item.calcium}}</h3>
-	<h3>{{item.iron}}</h3>
-</body>
-	{% endfor %}
+<p class="padding-top">Please enter custom data</p>
+<h1>Name: {{item.name}}</h1>
+<h3>Calories: {{item.calories}}</h3>
+<h3>Calories from Fat: {{item.fat_cals}}</h3>
+<h3>Total Fat: {{item.total_fat}}</h3>
+<h3>Saturated Fat: {{item.saturated_fat}}</h3>
+<h3>Trans Fat: {{item.trans_fat}}</h3>
+<h3>Cholesterol: {{item.cholesterol}}</h3>
+<h3>Sodium: {{item.sodium}}</h3>
+<h3>Carbohydrates: {{item.carbohydrates}}</h3>
+<h3>Dietary Fiber: {{item.dietary_fiber}}</h3>
+<h3>Sugars: {{item.sugars}}</h3>
+<h3>Protein: {{item.protein}}</h3>
+<h3>Vitamin A: {{item.vitamin_a}}</h3>
+<h3>Vitamin C: {{item.vitamin_c}}</h3>
+<h3>Calcium: {{item.calcium}}</h3>
+<h3>Iron: {{item.iron}}</h3>
 {% endblock %}

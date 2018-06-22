@@ -24,7 +24,7 @@ CLIENT_ID = json.loads(
 APPLICATION_NAME = "Calorie Application"
 
 
-engine = create_engine('sqlite:///foodlists.db')
+engine = create_engine('sqlite:///foodlists.db', connect_args={'check_same_thread': False}, echo=True)
 
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -153,7 +153,7 @@ def gdisconnect():
         return response
 
 
-
+@app.route('/')
 @app.route('/home')
 def home():
 	foods = session.query(FoodItem).all()

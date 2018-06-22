@@ -1,6 +1,5 @@
 {% extends "main.html" %}
 {% block content %}
-{% include "header.html" %}
 	<body>
 		<form method="POST" action="/add">
 			Title: <input type="text" name="title"><br>
@@ -22,5 +21,4 @@
 			<input type="submit" value="Add">
 		</form>	
 	</body>
-	{% endfor %}
 {% endblock %}
