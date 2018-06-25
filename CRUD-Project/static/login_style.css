@@ -154,11 +154,31 @@ u }
   background-color: #98FB98;
   width:100%;
   text-decoration: none;
-
 }
 
 .flash li {
   list-style-type: none;
   text-align: center;
+}
 
+.row top-menu {
+  display:inline-block;
+}
+
+.legend fieldset {
+  margin-bottom: 10px;
+}
+
+.field label{
+  text-align: right;
+  float: left;
+}
+
+.textbox input {
+  float: left;
+}
+
+.backBtn {
+  padding: 10px;
+  float: right;
 }

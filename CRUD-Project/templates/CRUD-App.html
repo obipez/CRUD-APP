@@ -1,6 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 	<div class="row top-menu">
+		<a href="{{url_for('addNew')}}" style="text-decoration: none;"><h1><button>Add an item!</button></h1></a>
 		<div class="col-md-6">
 		</div>
 		<div class="col-md-6 text-right">
@@ -19,26 +20,12 @@
 	</div>
 
 	<div id="result"></div>
-	<a href="{{url_for('addNew')}}" style="text-decoration: none;"><h1><button>Add an item!</button></h1></a>
-	<h1>Foods</h1>>
+	<h1>Foods</h1>
 	<table>
 		{% for food in foods %}
 			<tr>
 				<td>
 					<a href="{{url_for('moreInfo', id=food.id)}}">{{food.name}}</a>
-				</td>
-				<td>
-					<form method="POST" action="./update">
-						<input type="hidden" value="{{food.name}}" name="olditem">
-						<input type="text" value="{{food.name}}" name="newitem">
-						<input type="submit" value="Update">
-					</form>
-				</td>
-				<td>
-					<form method="POST" action="./delete">
-							<input type="hidden" value="{{food.name}}" name="item">
-							<input type="submit" value="Delete">
-					</form>
 				</td>
 			</tr>
 		{% endfor %}

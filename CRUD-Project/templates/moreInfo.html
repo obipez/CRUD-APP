@@ -1,20 +1,27 @@
 {% extends "main.html" %}
 {% block content %}
-<p class="padding-top">Please enter custom data</p>
-<h1>Name: {{item.name}}</h1>
-<h3>Calories: {{item.calories}}</h3>
-<h3>Calories from Fat: {{item.fat_cals}}</h3>
-<h3>Total Fat: {{item.total_fat}}</h3>
-<h3>Saturated Fat: {{item.saturated_fat}}</h3>
-<h3>Trans Fat: {{item.trans_fat}}</h3>
-<h3>Cholesterol: {{item.cholesterol}}</h3>
-<h3>Sodium: {{item.sodium}}</h3>
-<h3>Carbohydrates: {{item.carbohydrates}}</h3>
-<h3>Dietary Fiber: {{item.dietary_fiber}}</h3>
-<h3>Sugars: {{item.sugars}}</h3>
-<h3>Protein: {{item.protein}}</h3>
-<h3>Vitamin A: {{item.vitamin_a}}</h3>
-<h3>Vitamin C: {{item.vitamin_c}}</h3>
-<h3>Calcium: {{item.calcium}}</h3>
-<h3>Iron: {{item.iron}}</h3>
+<form method="POST" action="{{url_for('update', id=item.id)}}">
+	<div class="fieldset">
+		<fieldset>
+			<legend>Nutritional Info</legend>
+			<h1><label class="field" for="{{item.name}}"<span>{{item.name}}</span></label><input type="text" name="title"></h1>
+			<p><label class="field" for="{{item.calories}}"<span>Calories: {{item.calories}}</span></label><input type="number" name="calories" class="textbox"></p>
+			<p><label class="field" for="{{item.fat_cals}}"<span>Calories from Fat: {{item.fat_cals}}</span></label><input type="number" name="fat_cals" class="textbox"></p>
+			<p><label class="field" for="{{item.total_fat}}"<span>Total Fat: {{item.total_fat}}</span></label><input type="number" name="total_fat" class="textbox"></p>
+			<p><label class="field" for="{{item.saturated_fat}}"<span>Saturated Fat: {{item.saturated_fat}}</span></label><input type="number" name="saturated_fat" class="textbox"></p>
+			<p><label class="field" for="{{item.trans_fat}}"<span>Trans Fat: {{item.trans_fat}}</span></label><input type="number" name="trans_fat" class="textbox"></p>
+			<p><label class="field" for="{{item.cholesterol}}"<span>Cholesterol: {{item.cholesterol}}</span></label><input type="number" name="cholesterol" class="textbox"></p>
+			<p><label class="field" for="{{item.sodium}}"<span>Sodium: {{item.sodium}}</span></label><input type="number" name="sodium" class="textbox"></p>
+			<p><label class="field" for="{{item.carbohydrates}}"<span>Carbohydrates: {{item.carbohydrates}}</span></label><input type="number" name="carbohydrates" class="textbox"></p>
+			<p><label class="field" for="{{item.dietary_fiber}}"<span>Dietary Fiber: {{item.dietary_fiber}}</span></label><input type="number" name="dietary_fiber" class="textbox"></p>
+			<p><label class="field" for="{{item.sugars}}"<span>Sugars: {{item.sugars}}</span></label><input type="number" name="sugars" class="textbox"></p>
+			<p><label class="field" for="{{item.protein}}"<span>Protein: {{item.protein}}</span></label><input type="number" name="protein" class="textbox"></p>
+			<p><label class="field" for="{{item.vitamin_a}}"<span>Vitamin A: {{item.vitamin_a}}</span></label><input type="number" name="vitamin_a" class="textbox"></p>
+			<p><label class="field" for="{{item.vitamin_c}}"<span>Vitamin C: {{item.vitamin_c}}</span></label><input type="number" name="vitamin_c" class="textbox"></p>
+			<p><label class="field" for="{{item.calcium}}"<span>Calcium: {{item.calcium}}</span></label><input type="number" name="calcium" class="textbox"></p>
+			<p><label class="field" for="{{item.iron}}"<span>Iron: {{item.iron}}</span></label><input type="number" name="iron" class="textbox"></p>
+			<input type="submit" value="Update"><input type="submit" value="Back" action="{{url_for('home')}}">
+		</fieldset>
+	</div>
+</form>
 {% endblock %}
