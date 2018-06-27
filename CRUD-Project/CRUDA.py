@@ -254,6 +254,16 @@ def addNew():
 	return render_template('addNew.html')
 
 
+# trackapi.nutritionix.com/v2
+
+@app.route('/search', methods=["POST"])
+def search():
+	search = request.form['search']
+	r = request.get(trackapi.nutritionix.com/v2/search)
+	return search
+
+
+
 if __name__ == "__main__":
   app.secret_key = 'super_secret_key'
   app.run(host='0.0.0.0', port=5000, debug=True)

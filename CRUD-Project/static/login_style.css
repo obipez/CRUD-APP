@@ -117,11 +117,11 @@ h3 {
 .banner h1 {
   margin: 45px 0;
 }
- .restaurant-list {
+ .food-list {
   background-color: #F0F0F0;
   padding: 20px;
 u }
- .restaurant-list:hover {
+ .food-list:hover {
   background-color: #e1e17f;
   padding: 20px;
 }
@@ -180,5 +180,9 @@ u }
 
 .backBtn {
   padding: 10px;
+  float: right;
+}
+
+.searchBar {
   float: right;
 }

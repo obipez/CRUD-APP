@@ -6,6 +6,28 @@
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='login_style.css') }}">
 	</head>
 	<body>
+		<div class="top-menu" style="padding-left: 16px">
+  			<a class="active" href="#home">Home</a>
+  			<div class="search-container">
+    			<form action="/action_page.php">
+      			<input type="text" placeholder="Search.." name="search">
+      			<button type="submit"><i class="fa fa-search"></i></button>
+    			</form>
+    		</div>
+  			<div class="col-md-6 text-right">
+				<div id="signinButton">
+		   			<span class="g-signin"
+		       			data-scope="openid email"
+		       			data-clientid="13140951618-15nik769cellkubaqnjk5facdib2dh4d.apps.googleusercontent.com"
+		       			data-redirecturi="postmessage"
+		       			data-accesstype="offline"
+		        		data-cookiepolicy="single_host_origin"
+		        		data-callback="signInCallback"
+	        			data-approvalprompt="force">
+	      			</span>
+	    		</div>
+	 		</div>
+		</div>
 		<div class="container">
 			{% block content %}
 			{% endblock %}

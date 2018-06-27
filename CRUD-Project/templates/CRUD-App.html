@@ -1,27 +1,12 @@
 {% extends "main.html" %}
 {% block content %}
-	<div class="row top-menu">
+	<div class="row top-menu" style="padding-left: 16px">
 		<a href="{{url_for('addNew')}}" style="text-decoration: none;"><h1><button>Add an item!</button></h1></a>
-		<div class="col-md-6">
-		</div>
-		<div class="col-md-6 text-right">
-			<div id="signinButton">
-		      <span class="g-signin"
-		        data-scope="openid email"
-		        data-clientid="13140951618-15nik769cellkubaqnjk5facdib2dh4d.apps.googleusercontent.com"
-		        data-redirecturi="postmessage"
-		        data-accesstype="offline"
-		        data-cookiepolicy="single_host_origin"
-		        data-callback="signInCallback"
-		        data-approvalprompt="force">
-		      </span>
-		    </div>
-		 </div>
 	</div>
-
+	
 	<div id="result"></div>
 	<h1>Foods</h1>
-	<table>
+	<table class="food-list">
 		{% for food in foods %}
 			<tr>
 				<td>
