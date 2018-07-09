@@ -2,4 +2,4 @@
 
 Check it out at:
 
-https://obipez.github.io/CRUD-APP/
+https://obipez.github.io/CRUD-APP/tree/master/CRUD-Project
